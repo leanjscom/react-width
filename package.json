@@ -1,0 +1,135 @@
+{
+  "name": "react-width",
+  "version": "0.1.7",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leanjscom/react-width.git"
+  },
+  "main": "./lib/index.js",
+  "module": "es/index.js",
+  "author": "LeanJS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leanjscom/react-width/issues"
+  },
+  "homepage": "https://github.com/leanjscom/react-width#readme",
+  "scripts": {
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:umd": "cross-env BABEL_ENV=rollup NODE_ENV=development rollup -c -o dist/react-width.js",
+    "build:umd:min": "cross-env BABEL_ENV=rollup NODE_ENV=production rollup -c -o dist/react-width.min.js",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "clean": "rimraf lib dist es coverage",
+    "prepublish": "npm run clean && npm run build",
+    "test": "node scripts/test.js --env=jsdom",
+    "coverage": "node scripts/test.js --coverage",
+    "eslint": "./node_modules/.bin/esw --color -w --ext .jsx,.js src/**",
+    "prettier": "./node_modules/.bin/prettier-standard --trailing-comma es5 --single-quote --write src/**/*.js src/**/*.jsx",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.5.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.16.0",
+    "babel-core": "^6.0.20",
+    "babel-eslint": "^7.2.1",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.2.8",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-constant-elements": "^6.23.0",
+    "babel-plugin-transform-react-inline-elements": "^6.22.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-typecheck": "^3.9.0",
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.0.15",
+    "babel-preset-stage-0": "^6.0.15",
+    "babel-register": "^6.18.0",
+    "babelrc-rollup": "^3.0.0",
+    "chalk": "^1.1.3",
+    "connect-history-api-fallback": "^1.3.0",
+    "cross-env": "^5.0.0",
+    "dotenv": "^4.0.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-config-babel": "^6.0.0",
+    "eslint-config-prettier": "^1.6.0",
+    "eslint-config-standard": "^10.2.0",
+    "eslint-loader": "^1.7.1",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-prettier": "^2.0.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-react": "^6.10.3",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-watch": "^3.0.1",
+    "file-loader": "^0.11.1",
+    "fs": "^0.0.1-security",
+    "fs-extra": "^2.1.2",
+    "husky": "^0.13.3",
+    "inquirer": "^2.0.0",
+    "jest": "^20.0.4",
+    "jest-css-modules": "^1.1.0",
+    "lint-staged": "^3.4.0",
+    "path": "^0.12.7",
+    "prettier": "^0.22.0",
+    "prettier-standard": "^3.0.1",
+    "raw-loader": "^0.5.1",
+    "react-addons-test-utils": "^15.5.1",
+    "react-test-renderer": "^15.5.4",
+    "rimraf": "^2.6.1",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-replace": "^1.1.1",
+    "rollup-plugin-uglify": "^2.0.1",
+    "standard": "^10.0.1",
+    "uglify-es": "^3.0.15",
+    "url-loader": "^0.5.8"
+  },
+  "lint-staged": {
+    "*.js": [
+      "prettier-standard --trailing-comma es5 --single-quote --write",
+      "git add"
+    ],
+    "*.jsx": [
+      "prettier-standard --trailing-comma es5 --single-quote --write",
+      "git add"
+    ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}"
+    ],
+    "setupFiles": [
+      "<rootDir>/config/polyfills.js"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.js?(x)",
+      "<rootDir>/src/**/?(*.)(spec|test).js?(x)"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    }
+  }
+}

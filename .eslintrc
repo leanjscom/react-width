@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "babel",
+    "prettier",
+    "airbnb",
+    "standard"
+  ],
+  "globals": {
+    "fetch": true,
+    "describe": false,
+    "it": false,
+    "beforeEach": false,
+    "afterEach": false,
+    "before": false,
+    "after": false,
+    "expect": true,
+    "fail": true,
+    "src": true,
+    "sync": true,
+    "test": true,
+    "root": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": [2, { }],
+    "import/named": 2,
+    "react/forbid-prop-types": 0,
+    "strict": 0
+  }
+}

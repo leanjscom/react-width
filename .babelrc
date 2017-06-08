@@ -1,0 +1,35 @@
+{
+  "plugins": [
+    "babel-plugin-transform-class-properties",
+    [
+      "babel-plugin-transform-object-rest-spread",
+      {
+        "useBuiltIns": true
+      }
+    ],
+    [
+      "babel-plugin-transform-react-jsx",
+      {
+        "useBuiltIns": true
+      }
+    ],
+    [
+      "babel-plugin-transform-runtime",
+      {
+        "helpers": false,
+        "polyfill": false,
+        "regenerator": true
+      }
+    ],
+  ],
+  "presets": [
+    [
+      "es2015",
+      {
+        "modules": false
+      }
+    ],
+    "stage-0",
+    "react"
+  ]
+}
