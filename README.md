@@ -37,7 +37,7 @@ const SMALL = 1
 const EXTRA_SMALL = 0
 ```
 
-3- MUI implements the `width` functionality using a HOC. We think HOCs are great, but there are some cases where [Render Callback](http://reactpatterns.com/#render-callback) (AKA) [Function as Child](https://medium.com/merrickchristensen/function-as-child-components-5f3920a9ace9) works better. Therefore we have implemented both so you can choose which one suits your problem. To be more precise, we have just implemented a Width Render Callback Component, and our withWidth just uses the Width Render Callback Component.
+3- MUI implements the `width` functionality using a HOC. We think HOCs are great, but there are some cases where [Render Callback](http://reactpatterns.com/#render-callback) (AKA) [Function as Child](https://medium.com/merrickchristensen/function-as-child-components-5f3920a9ace9) works better. Therefore we have implemented both so you can choose the one that suits your problem. To be more precise, we have just implemented a Width Render Callback Component, and our withWidth just uses the Width Render Callback Component.
 
 ## How use it
 
