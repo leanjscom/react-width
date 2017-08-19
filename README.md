@@ -43,7 +43,7 @@ const EXTRA_SMALL = 0
 
 ### Render Callback flavour
 
-```react
+```javascript
 
 import { Width, LARGE } from 'react-width'
 
@@ -71,7 +71,7 @@ export default NewFloatingButton
 
 ### HOC flavour
 
-```react
+```javascript
 
 import withWidth, { LARGE } from 'react-width'
 
