@@ -12,7 +12,7 @@ const MEDIUM = 2
 const SMALL = 1
 ```
 
-This way a component that is enhanced with withWidth can check props.width to make decissions about how the interface should be. For instance, in a page with 2 columns, if the screen is `LARGE` then we display the left column, if the screen is `MEDIUM` or `SMALL`, then we display the right column.
+This way a component that is enhanced with withWidth can check props.width to make decissions about how the interface should be. For instance, in a page with 2 columns, if the screen is `LARGE` then we display the left column, if the screen is `MEDIUM` or `SMALL`, then we display the right column:
 
 ```javascript
   <Row>
