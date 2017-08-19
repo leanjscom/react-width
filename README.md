@@ -4,7 +4,7 @@
 
 React is a paradigm shift, and it changes the way we think of "time" from what we are used to when implementing UIs using other tools. For instance, we should not hide things based on events, but instead just not displaying them.
 
-material-ui.com (MUI) has an interesting utility to help us achieving that, [withWidth](https://github.com/callemall/material-ui/blob/master/src/utils/withWidth.js). withWidth is a Higher-Order Component (HOC) that tells a component what type of screen is displaying the component. It uses props (like any other HOC) to inject some properties into a component. The injected prop in this case is `width`, which is the width of the screen. The width of the screen is represented in these 3 values:
+material-ui.com (MUI) has an interesting utility to help us achieving that, [withWidth](https://github.com/callemall/material-ui/blob/master/src/utils/withWidth.js). withWidth is a Higher-Order Component (HOC) that tells a component what size of screen is displaying the component. It uses props (like any other HOC) to inject some properties into a component. The injected prop in this case is `width`, which is the width of the screen. The width of the screen is represented in these 3 values:
 
 ```javascript
 const LARGE = 3
