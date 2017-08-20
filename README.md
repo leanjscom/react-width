@@ -41,7 +41,7 @@ const EXTRA_SMALL = 0
 
 ## How to use it
 
-### Render Callback approach
+### Render Callback implementation
 
 ```javascript
 
@@ -69,7 +69,7 @@ export default NewFloatingButton
 
 ```
 
-### HOC approach
+### HOC implementation
 
 ```javascript
 
