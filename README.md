@@ -94,6 +94,6 @@ const NewFloatingButton = ({ onClick, width }) => {
   )
 }
 
-export default withWidth(NewFloatingButton)
+export default withWidth()(NewFloatingButton)
 
 ```
