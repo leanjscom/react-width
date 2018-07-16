@@ -1,5 +1,10 @@
 # React Width
 
+## How to install:
+```sh
+yarn add react-width
+```
+
 ## Why do we need this Width?
 
 React is a paradigm shift, and it changes the way we think of "time" from what we are used to when implementing UIs using other tools. For instance, we should not hide things based on events, but instead just not display them.
